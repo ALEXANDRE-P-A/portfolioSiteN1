@@ -9,6 +9,7 @@ body {
   font-family: 'Tiro Bangla', serif;
   transition: all 1s ease-in-out;
 }
+/* - ヘッダー - */
 header {
   position: fixed;
   width: 100%;
@@ -29,6 +30,7 @@ header > a {
   color: #fff;
   text-decoration: none;
 }
+/* - メニューボタンー - */
 #menu-button {
   position: fixed;
   top: 0;
@@ -36,11 +38,13 @@ header > a {
   height: 50px;
 }
 
-/* ------- PC style ------- */
+/* ------------------------------------------ PC style ------------------------------------------ */
 @media screen and (min-width: 768px){
+  /* - スマホナビゲーション(PCでは非表示) - */
   #nav-sp {
     display: none;  
   }
+  /* - PCナビゲーション - */
   #nav-pc {
     float: right;
     font-size: 24px;
@@ -54,16 +58,34 @@ header > a {
   #nav-pc > a:hover {
     text-decoration: underline;
   }
+  /* - スマホナビゲーションボタン(PCでは非表示) - */
   #menu-button {
     display: none;
   }
+  /* ------- メインビジュアルPC ------- */
+  #main-visual {
+    width: auto;
+    height: 400px;
+    background-image: url('../img/main-visual.JPG');
+    background-size: 1280px 400px;
+    border-bottom: 2px solid #C9C3F5;
+  }
+  /* ------- Article(コンテンツエリア)PC ------- */
+  article {
+    width: auto;
+    height: 400px;
+    background-color: #000;
+    padding: 20px;
+  }
 }
-/* ------- Smartphone style ------- */
+/* ------------------------------------------ Smartphone style ------------------------------------------ */
 
 @media screen and (max-width: 884px){
+  /* - PCナビゲーション(スマホでは非表示) - */
   #nav-pc {
     display: none;  
   }
+  /* - スマホナビゲーション - */
   #nav-sp {
     display: none;
     position: fixed;
@@ -91,6 +113,7 @@ header > a {
     font-size: 24px;
     text-shadow: 5px 5px 10px #000;
   }
+  /* - スマホナビゲーション閉じるボタン - */
   #button-close {
     float: right;
     margin-right: 20px;
@@ -107,8 +130,24 @@ header > a {
     position: absolute;
     right: 30px;
   }
+  /* - スマホナビゲーションボタン - */
   #menu-button {
     display: block;
+  }
+}
+@media screen and (max-width: 767px){
+  /* ------- メインビジュアルSP ------- */
+  #main-visual {
+    height: 400px;
+    background-image: url('../img/main-visual.JPG');
+    background-size: 100% 400px;
+    border-bottom: 2px solid #C9C3F5;
+  }
+  article {
+    width: auto;
+    height: 400px;
+    background-color: #000;
+    padding: 20px;
   }
 }
 

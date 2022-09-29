@@ -12,8 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- ヘッダー -->
     <header>
       <a href="index.html"><div id="logo">Atovag SA</div></a>
+      <!-- PCナビゲーション -->
       <nav id="nav-pc">
         <a href="news.html">Novidades</a>
         <a href="works.html">Trabalhos</a>
@@ -21,7 +23,9 @@
         <a href="contact.html">Contato</a>
         <a href="about-us">Sobre Nós</a>
       </nav>
+      <!-- メニューボタン(PCは非表示) -->
       <img id="menu-button" src="img/button-menu.png" alt="Menu Button" onclick="document.getElementById('nav-sp').style.display = 'block'">
+      <!-- スマホナビゲーション -->
       <nav id="nav-sp">
         <div id="logo"><span>Atovag SA</span><img id="button-close" src="img/button-close.png" alt="Close Button" onclick="document.getElementById('nav-sp').style.display = 'none'"></div>
         <a href="news.html" onclick="document.getElementById('nav-sp').style.display = 'none'">Novidades</a>
@@ -31,6 +35,16 @@
         <a href="about-us" onclick="document.getElementById('nav-sp').style.display = 'none'">Sobre Nós</a>
       </nav>
     </header>
+    <main>
+      <!-- メインビジュアル -->
+      <div id="main-visual">
+      </div>
+      <article>
+        <section>
+
+        </section>
+      </article>
+    </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/animation.js"></script>
     <script src="js/main.js"></script>
