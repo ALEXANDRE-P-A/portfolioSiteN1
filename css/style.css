@@ -22,13 +22,22 @@ header {
   flex-direction: row;
   justify-content: space-between;
 }
+header > a {
+  width: 200px;
+  margin-left: 20px;
+  text-shadow: 1px 1px 2px #000;
+  color: #fff;
+  text-decoration: none;
+}
+#menu-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50px;
+}
 
 /* ------- PC style ------- */
 @media screen and (min-width: 768px){
-  #logo {
-    width: 200px;
-    margin-left: 20px;
-  }
   #nav-sp {
     display: none;  
   }
@@ -45,20 +54,26 @@ header {
   #nav-pc > a:hover {
     text-decoration: underline;
   }
+  #menu-button {
+    display: none;
+  }
 }
 /* ------- Smartphone style ------- */
+
 @media screen and (max-width: 884px){
   #nav-pc {
     display: none;  
   }
   #nav-sp {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
     width: 300px;
-    height: 300px;
+    height: fit-content;
+    padding: 20px 10px;
     background-color: #1d0ca0;
-    padding: 10px;
+    padding: 30px 10px;
     border-left: 2px solid #C9C3F5;
     border-bottom: 2px solid #C9C3F5;
     border-radius: 0 0 0 15px;
@@ -68,12 +83,13 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 30px;
+    margin-left: 20px;
   }
   #logo {
     width: 200px  ;
     font-size: 24px;
     text-shadow: 5px 5px 10px #000;
-    margin-left: 20px;
   }
   #button-close {
     float: right;
@@ -91,50 +107,8 @@ header {
     position: absolute;
     right: 30px;
   }
-}
-@media screen and (max-width: 767px){
-  #nav-pc {
-    display: none;  
-  }
-  #nav-sp {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 300px;
-    background-color: #1d0ca0;
-    padding: 10px;
-    border-left: 2px solid #C9C3F5;
-    border-bottom: 2px solid #C9C3F5;
-    border-radius: 0 0 0 15px;
-  }
-  #nav-sp > div {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #logo {
-    width: 200px  ;
-    font-size: 24px;
-    text-shadow: 5px 5px 10px #000;
-    margin-left: 20px;
-  }
-  #button-close {
-    float: right;
-    margin-right: 20px;
-  }
-  #nav-sp > a {
+  #menu-button {
     display: block;
-    margin: 20px 0  0 30px;
-    color:#fff;
-    text-shadow: 3px 3px 6px #000;
-    text-decoration: none;
-  }
-  #nav-sp > a::after {
-    content: url('../img/arrow.png');
-    position: absolute;
-    right: 30px;
   }
 }
 
